@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Vanilla JS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="client/style.css" />
+  </head>
+  <body>
+    <div class="main-layout">
+      <nav class="nav">
+        <div class="nav__logo">SPA</div>
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="/" class="nav__link" data-link>
+              <span class="icon-container">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <span class="nav__item-label">داشبورد</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="/products" class="nav__link" data-link>
+              <span class="icon-container">
+                <i class="fa-brands fa-product-hunt"></i>
+              </span>
+              <span class="nav__item-label">محصولات</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="/posts" class="nav__link" data-link>
+              <span class="icon-container">
+                <i class="fa-solid fa-blog"></i>
+              </span>
+              <span class="nav__item-label">پست ها</span>
+            </a>
+          </li>
+        </ul>
+        <div class="app-version">
+          <span class="app-version__label">SPA v.1</span>
+          <span class="icon-container sidebar-toggler">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        </div>
+      </nav>
+      <main id="app"></main>
+    </div>
+    <script src="client/app.js" type="module"></script>
+  </body>
+</html>

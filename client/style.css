@@ -1,0 +1,133 @@
+@import url("./assets/styles/fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "iranyekan";
+  list-style: none;
+}
+
+/*  VARIABLES : */
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+  --nav-width: 250px;
+}
+
+body {
+  font-family: "iranyekan";
+  color: var(--mainBlack);
+  background-color: var(--bodyColor);
+  direction: rl;
+}
+
+.main-layout {
+  display: flex;
+}
+.nav {
+  height: 100vh;
+  width: var(--nav-width);
+  background-color: #fff;
+  padding: 1.5rem 0.75rem;
+  position: sticky;
+  top: 0;
+  right: 0;
+  border-radius: 100px 0 0 0;
+  background: linear-gradient(180deg, #324467, #283142);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-out;
+}
+.nav__items {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.nav__items::-webkit-scrollbar {
+  display: none;
+}
+.nav__item {
+  margin: 5px 0;
+}
+.nav__logo {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 12px 8px;
+  transition: all 0.3s ease-out;
+  display: flex;
+}
+
+.nav__link:hover {
+  background-color: #eef2f8;
+  color: #2c4982;
+  border-radius: 1.5rem;
+}
+.nav__item-label {
+  margin-right: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: hidden;
+}
+.icon-container {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.app-version {
+  color: #efefef;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#app {
+  height: 200vh;
+  padding: 3rem 2rem 0 0;
+  flex-grow: 1;
+}
+
+/* mini-sidebar */
+
+.mini-sidebar.nav {
+  /* width: 70px; */
+  overflow-x: hidden;
+}
+.mini-sidebar.nav .nav__link:hover {
+  background-color: transparent;
+  color: gold;
+}
+.nav.mini-sidebar .nav__logo {
+  font-size: 1rem;
+}
+.nav.mini-sidebar .app-version__label {
+  display: none;
+}
+
+.sidebar-toggler {
+  transition: all 0.5s ease-in-out;
+}
+
+.nav.mini-sidebar .sidebar-toggler {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
